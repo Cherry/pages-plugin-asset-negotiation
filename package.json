@@ -1,6 +1,6 @@
 {
 	"name": "pages-plugin-asset-negotiation",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Cloudflare Pages plugin for optimised assets via content negotiation",
 	"keywords": [
 		"cloudflare-pages",
@@ -38,7 +38,7 @@
 		"eslint-plugin-node": "11.1.0",
 		"eslint-plugin-unicorn": "42.0.0",
 		"typescript": "4.6.4",
-		"wrangler": "0.0.33"
+		"wrangler": "2.0.0"
 	},
 	"engines": {
 		"node": ">=16"

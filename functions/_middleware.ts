@@ -49,10 +49,16 @@ export const onRequest: assetNegotiationPagesPluginFunction = async ({env, next,
 			if(asset && asset.status === 200){
 				// found the asset, so we can serve it
 				// sometimes the asset doesn't have a valid content-type, so we should set it
+				// to do that, we need to create a new response, so the headers become mutable
+				const newHeaders = new Headers(asset.headers);
 				if(!asset?.headers?.has?.('content-type') || asset?.headers?.get?.('content-type') === 'application/octet-stream'){
-					asset?.headers?.set?.('content-type', mimetypeMap[format]);
+					newHeaders.set('content-type', mimetypeMap[format]);
 				}
-				return asset;
+				const newResponse = new Response(
+					[101, 204, 205, 304].includes(asset.status) ? null : asset.body,
+					{...asset, headers: newHeaders},
+				);
+				return newResponse;
 			}
 		}
 	}
