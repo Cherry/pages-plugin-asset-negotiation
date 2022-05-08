@@ -1,0 +1,46 @@
+{
+	"name": "pages-plugin-asset-negotiation",
+	"version": "0.1.0",
+	"description": "Cloudflare Pages plugin for optimised assets via content negotiation",
+	"keywords": [
+		"cloudflare-pages",
+		"cloudflare-pages-plugin",
+		"pages-plugin-asset-negotiation"
+	],
+	"homepage": "https://github.com/Cherry/pages-plugin-asset-negotiation#readme",
+	"bugs": {
+		"url": "https://github.com/Cherry/pages-plugin-asset-negotiation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Cherry/pages-plugin-asset-negotiation.git"
+	},
+	"license": "MIT",
+	"author": "James Ross <james@jross.me> (https://jross.me)",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"scripts": {
+		"build": "npx wrangler pages functions build --plugin --outfile index.js",
+		"prepare": "npm run build",
+		"test": "eslint ."
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "3.9.0",
+		"@nodecraft/eslint-config": "17.0.0",
+		"@typescript-eslint/eslint-plugin": "5.22.0",
+		"@typescript-eslint/parser": "5.22.0",
+		"eslint": "8.15.0",
+		"eslint-plugin-json": "3.1.0",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-unicorn": "42.0.0",
+		"typescript": "4.6.4",
+		"wrangler": "0.0.33"
+	},
+	"engines": {
+		"node": ">=16"
+	}
+}

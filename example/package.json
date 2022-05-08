@@ -1,0 +1,6 @@
+{
+	"scripts": {
+		"build": "npx wrangler pages functions build --outfile static/_worker.js",
+		"start": "npx wrangler pages dev static"
+	}
+  }
