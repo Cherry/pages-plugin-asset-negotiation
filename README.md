@@ -18,7 +18,7 @@ This plugin assumes a few thing:
 ## Installation
 
 ```sh
-npm install --save pages-plugin-asset-negotiation
+npm install --save-dev pages-plugin-asset-negotiation
 ```
 
 ## Usage
