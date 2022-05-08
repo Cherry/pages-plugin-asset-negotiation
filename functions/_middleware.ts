@@ -46,7 +46,7 @@ export const onRequest: assetNegotiationPagesPluginFunction = async ({env, next,
 				cf: request.cf,
 			});
 			const asset = await env.ASSETS.fetch(lookupReq);
-			if(asset){
+			if(asset && asset.status === 200){
 				// found the asset, so we can serve it
 				// sometimes the asset doesn't have a valid content-type, so we should set it
 				if(!asset?.headers?.has?.('content-type') || asset?.headers?.get?.('content-type') === 'application/octet-stream'){

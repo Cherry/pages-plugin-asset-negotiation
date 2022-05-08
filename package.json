@@ -1,6 +1,6 @@
 {
 	"name": "pages-plugin-asset-negotiation",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Cloudflare Pages plugin for optimised assets via content negotiation",
 	"keywords": [
 		"cloudflare-pages",
