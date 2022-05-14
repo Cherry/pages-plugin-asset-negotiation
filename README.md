@@ -4,7 +4,7 @@
 
 This is a Cloudflare Pages plugin that can deliver optimised assets like images, in much newer and modern formats via [Content Negotiation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation).
 
-Today, Clouflare Pages doesn't support other zone-level features such as Polish, which effectively does this same thing automatically if you were using Cloudflare as a CDN, but we have to implement it ourselves within Pages.
+Today, Cloudflare Pages doesn't support other zone-level features such as Polish, which effectively does this same thing automatically if you were using Cloudflare as a CDN, but we have to implement it ourselves within Pages.
 
 By using Content Negotiation, we can deliver images in the most modern formats, like JPEG XL, AVIF, WEBP, etc. without having to change anything in our markup - this means you could reference `/images/dog.jpeg` in your HTML or CSS, but if the requesting browser supports a newer image format (as presented in the `Accept` header), we can serve the image in that format, such as `dog.jxl`. This is a huge win for your users, as they get the image in the most modern format - which means smaller filesizes - without having to change anything in your markup.
 
