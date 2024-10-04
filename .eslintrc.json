@@ -1,22 +1,13 @@
 {
 	"root": true,
 	"extends": [
-		"@nodecraft",
-		"plugin:@typescript-eslint/recommended"
+		"@nodecraft/eslint-config/typescript"
 	],
-	"parser": "@typescript-eslint/parser",
-	"parserOptions": {
-		"ecmaVersion": 2021,
-		"sourceType": "module"
-	},
 	"plugins": [
 		"json",
-		"node",
-		"unicorn",
-		"@typescript-eslint"
+		"unicorn"
 	],
 	"rules": {
-		"node/no-unsupported-features/es-syntax": "off",
-		"node/no-missing-import": "off"
+		"n/no-unsupported-features/node-builtins": "off"
 	}
 }
