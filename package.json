@@ -1,6 +1,6 @@
 {
 	"name": "pages-plugin-asset-negotiation",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "Cloudflare Pages plugin for optimised assets via content negotiation",
 	"keywords": [
 		"cloudflare-pages",
@@ -22,7 +22,8 @@
 	"types": "index.d.ts",
 	"files": [
 		"dist",
-		"index.js"
+		"index.js",
+		"index.d.ts"
 	],
 	"scripts": {
 		"build": "npx wrangler pages functions build --plugin --outdir dist",
@@ -34,13 +35,13 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20250109.0",
 		"@nodecraft/eslint-config": "44.3.0",
-		"@typescript-eslint/eslint-plugin": "8.19.1",
-		"@typescript-eslint/parser": "8.19.1",
+		"@typescript-eslint/eslint-plugin": "8.20.0",
+		"@typescript-eslint/parser": "8.20.0",
 		"eslint": "8.57.1",
 		"eslint-plugin-json": "4.0.1",
 		"eslint-plugin-unicorn": "56.0.1",
 		"typescript": "5.7.3",
-		"wrangler": "3.100.0"
+		"wrangler": "3.102.0"
 	},
 	"engines": {
 		"node": ">=16"
